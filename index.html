@@ -324,22 +324,9 @@
         document.getElementById('resultCard').style.display='none'
         // document.getElementById('the-reply-from-the-developer-of-the-mcms.qzz.io-website').textContent = '';
     }
+</script>
 /* 末影之眼今天心情不好，或者你的运气值需要充值了。请保持微笑，按下 F5，让“特性”再次降临，不是源代码的问题哦 */
-</script>
-<script>
-    document.addEventListener('contextmenu', function(e) {
-        if (localStorage.getItem('rightClickUnlocked') === 'true') {
-            console.log('右键已解封，放行！');
-            return; 
-        }
-        e.preventDefault();
-        alert('想看源代码？先看许可证！');
-        window.open('https://xiaotc-2026.github.io/mc-end-portal-calculator/LICENSE.txt', '_blank');
-        localStorage.setItem('rightClickUnlocked', 'true');
-        alert('已解锁右键功能，下次可以直接查看源代码！');
-    });
-</script>
-<div style="text-align: right;color:#606770;font-size:13px;margin-bottom:24px">© 2026 All rights reserved by mcms.qzz.io.Code Open Source, Use At Your Own Risk.<a href="/LICENSE.txt" target="blank">MIT License</a></div>
+<div style="text-align: right;color:#606770;font-size:13px;margin-bottom:24px">© 2026 All rights reserved by mcms.qzz.io.Code Open Source, Use At Your Own Risk.<a href="https://xiaotc-2026.github.io/mc-end-portal-calculator/LICENSE.txt" target="blank">MIT License</a></div>
 </html>
 <!--由mcms.qzz.io提供-->
 <!--代码版本0.4.2.a-->
