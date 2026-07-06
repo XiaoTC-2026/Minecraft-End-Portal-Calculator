@@ -101,7 +101,7 @@ footer {max-width:1050px;outline: 2px black solid;border-width: 4px;outline-offs
 </style>
 </head>
 <body>
-<div id="pc-only-blocker" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000; z-index:99999; color:white; text-align:center; padding-top:20%;"><h1 style="font-size: 30px; margin-bottom: 20px;">仅限电脑访问</h1><p style="font-size: 18px; line-height: 1.6;">本计算器包含复杂的视口交互与固定分辨率布局。<br>为了您的体验，请使用 <strong>PC / Mac 电脑浏览器</strong> 访问。<br><br>(检测到您正在使用移动设备)</p></div>
+<div id="pc-only-blocker" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000; z-index:99999; color:white; text-align:center; padding-top:20%;"><div style="font-size: 30px; margin-bottom: 20px;">仅限电脑访问</div><p style="font-size: 18px; line-height: 1.6;">本计算器包含复杂的视口交互与固定分辨率布局。<br>为了您的体验，请使用 <strong>PC / Mac 电脑浏览器</strong> 访问。<br><br>(检测到您正在使用移动设备)</p></div>
 <script>
 (function() {function checkWidth() {var winWidth = window.innerWidth || document.documentElement.clientWidth;var blocker = document.getElementById('pc-only-blocker');if (winWidth <= 840) {blocker.style.display = 'block';document.body.style.overflow = 'hidden';} else {blocker.style.display = 'none';document.body.style.overflow = 'auto';}}checkWidth();window.addEventListener('resize', checkWidth);})();
 </script>
