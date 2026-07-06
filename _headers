@@ -1,0 +1,25 @@
+/ {
+  Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"
+  Link: </docs/api/>; rel="service-doc"
+  Link: </auth.md>; rel="https://workos.com/auth-md"
+  Link: </.well-known/agent-skills/index.json>; rel="describedby"
+  Vary: Accept
+}
+/.well-known/api-catalog {
+  Content-Type: application/linkset+json; charset=utf-8
+}
+/.well-known/openid-configuration {
+  Content-Type: application/json; charset=utf-8
+}
+/.well-known/oauth-protected-resource {
+  Content-Type: application/json; charset=utf-8
+}
+/.well-known/oauth-authorization-server {
+  Content-Type: application/json; charset=utf-8
+}
+/.well-known/mcp/server-card.json {
+  Content-Type: application/json; charset=utf-8
+}
+/.well-known/agent-skills/index.json {
+  Content-Type: application/json; charset=utf-8
+}
