@@ -1,0 +1,46 @@
+=======================================================================================
+                                      MIT License
+=======================================================================================
+
+Copyright (c) 2026 All rights reserved by tools.mcms.qzz.io & 2025_XiaoTangcai.Code Open 
+Source, Use At Your Own Risk
+
+Use at your own risk: This software won't guarantee you find the Stronghold, nor will 
+it save you from a Creeper explosion. The code is open source, but your luck is all 
+your own.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this 
+software and associated documentation files (the “Software”), to deal in the Software 
+without restriction, including without limitation the rights to use, copy, modify, 
+merge, publish, distribute, sublicense, and/or sell copies of the Software, and to 
+permit persons to whom the Software is furnished to do so, subject to the following 
+conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or 
+substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR 
+PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT 
+OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR 
+OTHER DEALINGS IN THE SOFTWARE.
+
+
+=======================================================================================
+                                 MIT 许可证中文翻译
+=======================================================================================
+
+版权所有 (c) 2026 tools.mcms.qzz.io & 2025_XiaoTangcai 代码开源，使用风险自负
+
+本软件提供“按原样”服务，不保证能帮你找到要塞，也不保证找到后你不会被苦力怕炸飞。代码虽开源，但
+运气归自己。
+
+特此免费授予任何获得本软件及相关文档文件的人（“软件”） 处理软件的权利，包括但不限于使用、复制、
+修改、合并、发布、 分发、再许可和/或出售软件副本的权利，前提是满足以下条件：
+
+上述版权声明和本许可声明必须包含在软件的所有副本或重要部分中。
+
+本软件按“原样”提供，不提供任何形式的明示或暗示担保， 包括但不限于对适销性、特定用途适用性和非
+侵权性的担保。 在任何情况下，作者或版权持有人均不对因使用或无法使用本软件 而产生的任何索赔、损
+害或其他责任负责，无论该责任是基于合同、 侵权行为还是其他原因。
