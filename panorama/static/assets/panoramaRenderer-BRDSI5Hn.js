@@ -38,12 +38,12 @@ import{n as e}from"./chunk-ChSjv458.js";import{C as t,D as n,E as r,L as i,P as 
     `},t=new Ge(y),n=new Ke(b,w);t.addPass(n);let r=new He(e);t.addPass(r),t.render()}else y.render(b,w)}return a(()=>{_&&v.value?(Se(),be(),new IntersectionObserver(e=>{J.value=e.some(e=>e.isIntersecting)}).observe(v.value),window.addEventListener(`focus`,()=>{Y.value=!0}),window.addEventListener(`blur`,()=>{Y.value=!1}),X()):v.value?.appendChild(R.getWebGLErrorMessage())}),(e,a)=>(i(),t(`div`,{ref_key:`wrapper`,ref:U,style:f({width:`100%`,paddingBottom:p(W)?`100vh`:`56.25%`,position:`relative`,overflow:`hidden`})},[l(`div`,{ref_key:`renderTarget`,ref:v,class:`renderer-component`,style:{position:`absolute`,top:0,left:0,width:`100%`,height:`100%`,cursor:`grab`}},null,512),D.value?(i(),t(`div`,{key:0,style:f({position:`absolute`,top:0,left:0,width:`100%`,height:`100%`,backgroundImage:`url(${p(qe)})`,backgroundSize:`contain`,pointerEvents:`none`})},null,4)):o(``,!0),M.value?(i(),t(`div`,{key:1,style:f({position:`absolute`,top:0,left:0,width:`100%`,height:`100%`,backdropFilter:M.value?`blur(3px)`:`none`,pointerEvents:`none`})},null,4)):o(``,!0),l(`div`,Je,[n.hideOverlayOptions?o(``,!0):(i(),h(fe,{key:0,name:p(u)(`panoramaRenderer.overlayOptions`),icon:p(ae)},{default:c(()=>[r(p(S),{modelValue:D.value,"onUpdate:modelValue":a[0]||=e=>D.value=e},{default:c(()=>[s(d(p(u)(`panoramaRenderer.gradientOverlay`)),1)]),_:1},8,[`modelValue`]),r(p(S),{modelValue:M.value,"onUpdate:modelValue":a[1]||=e=>M.value=e},{default:c(()=>[s(d(p(u)(`panoramaRenderer.blurOverlay`)),1)]),_:1},8,[`modelValue`])]),_:1},8,[`name`,`icon`])),r(p(C),{"aria-label":p(u)(N.value?`panoramaRenderer.pause`:`panoramaRenderer.play`),onClick:_e},{default:c(()=>[r(p(x),{icon:N.value?p(re):p(ie)},null,8,[`icon`])]),_:1},8,[`aria-label`]),p(G)?(i(),h(p(C),{key:1,"aria-label":p(u)(p(W)?`panoramaRenderer.exitFullscreen`:`panoramaRenderer.fullscreen`),onClick:a[2]||=e=>p(W)?p(q)():p(K)()},{default:c(()=>[r(p(x),{icon:p(W)?p(ne):p(te)},null,8,[`icon`])]),_:1},8,[`aria-label`])):o(``,!0)])],4))}}),$=document.querySelector(`#app`),Qe=V([Object.assign({"./locale/de.json":H,"./locale/en.json":W,"./locale/es.json":K,"./locale/fr.json":J,"./locale/it.json":_e,"./locale/ja.json":ye,"./locale/ko.json":xe,"./locale/lzh.json":X,"./locale/pt.json":we,"./locale/ru.json":Ee,"./locale/th.json":Oe,"./locale/uk.json":Ae,"./locale/zh-cn.json":Me,"./locale/zh-hk.json":Pe,"./locale/zh-tw.json":Ie})]);
 (async () => {
     let e = v(b({
-        image0: g().default(`Panorama_0.png`),
-        image1: g().default(`Panorama_1.png`),
-        image2: g().default(`Panorama_2.png`),
-        image3: g().default(`Panorama_3.png`),
-        image4: g().default(`Panorama_4.png`),
-        image5: g().default(`Panorama_5.png`), 
+        image0: g().default(`Panorama_0.webp`),
+        image1: g().default(`Panorama_1.webp`),
+        image2: g().default(`Panorama_2.webp`),
+        image3: g().default(`Panorama_3.webp`),
+        image4: g().default(`Panorama_4.webp`),
+        image5: g().default(`Panorama_5.webp`), 
         endSky: _().default(!1),
         hideOverlayOptions: _().default(!1)
     }).safeParse(await y()), $);
