@@ -101,11 +101,15 @@ footer {max-width:1050px;outline: 2px black solid;border-width: 4px;outline-offs
 </style>
 </head>
 <body>
-<div id="pc-only-blocker" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000; z-index:99999; color:white; text-align:center; padding-top:20%;"><div style="font-size: 30px; margin-bottom: 20px;">仅限电脑访问</div><p style="font-size: 18px; line-height: 1.6;">本计算器包含复杂的视口交互与固定分辨率布局。<br>为了您的体验，请使用 <strong>PC / Mac 电脑浏览器</strong> 访问，<br>或者访问<br><br><a href="index2.html" style="color:#ffffff;font-weight: bold;text-decoration: underline;">兼容手机端的简易版</a><br><br>(检测到您正在使用移动设备)</p></div>
-<script>
-(function() {function checkWidth() {var winWidth = window.innerWidth || document.documentElement.clientWidth;var blocker = document.getElementById('pc-only-blocker');if (winWidth <= 840) {blocker.style.display = 'block';document.body.style.overflow = 'hidden';} else {blocker.style.display = 'none';document.body.style.overflow = 'auto';}}checkWidth();window.addEventListener('resize', checkWidth);})();
-</script>
-<iframe src="/panorama/panorama.html"  style="position:fixed; top:0; left:0; width:100%; height:100%; border:none; z-index:-99999; background:#111;"></iframe>
+    
+<!--background iframe start-->
+<style>
+body{margin: 0;overflow-x: hidden;box-sizing: border-box; }
+.background-iframe{position: fixed;height: 3360px !important;width: 1890px !important; top:0%;border: none;z-index: -9999;left: 50%;transform: translateX(-50%) scale(1.006);will-change: transform; }
+</style>
+<iframe title="background" src="/panorama/panorama.html" class="background-iframe"></iframe>
+<!--background iframe end-->
+    
 <div id="copy-toast" class="kdcn74"><svg class="ejbc25" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span><strong>复制成功</strong></span></div>
 <header>
     <div class="row-2"><svg xmlns="http://www.w3.org/2000/svg"  color="#ffffff" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calculator w-6 h-6" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg><h1><div class="row"><div class="h1">Minecraft</div> 末地要塞定位计算器（两点式直线法/一次函数求交点）</div></h1></div><p class="text-muted-foreground">通过两次末影之眼投掷的玩家站位和落点坐标连成的直线，来计算要塞位置。</p><p class="text-muted-GGbeng">利用末影之眼指向机制，通过两次投掷坐标，以几何算法精准计算要塞位置，助你高效探索。适合末地较大、要塞分布较稀疏的情况。需要两次投掷，且两次投掷的起点距离越远，定位结果越准确。</p>
