@@ -1,0 +1,11 @@
+{
+  "resource": "https://tools.mcms.qzz.io/",
+  "authorization_servers": [
+    "https://tools.mcms.qzz.io/"
+  ],
+  "scopes_supported": [
+    "openid",
+    "profile",
+    "email"
+  ]
+}

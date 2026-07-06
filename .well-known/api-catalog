@@ -1,0 +1,24 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://tools.mcms.qzz.io/",
+      "item": [
+        {
+          "href": "https://tools.mcms.qzz.io/et/",
+          "rel": "service-desc",
+          "type": "text/html"
+        },
+        {
+          "href": "https://tools.mcms.qzz.io/docs/api/",
+          "rel": "service-doc",
+          "type": "text/html"
+        },
+        {
+          "href": "https://tools.mcms.qzz.io/robots.txt",
+          "rel": "status",
+          "type": "text/plain"
+        }
+      ]
+    }
+  ]
+}

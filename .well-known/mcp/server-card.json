@@ -1,0 +1,13 @@
+{
+  "serverInfo": {
+    "name": "tools.mcms.qzz.io",
+    "version": "1.0.0"
+  },
+  "transport": {
+    "type": "http",
+    "endpoint": "https://tools.mcms.qzz.io/"
+  },
+  "capabilities": [
+    "tool-discovery"
+  ]
+}

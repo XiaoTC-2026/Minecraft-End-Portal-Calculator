@@ -1,0 +1,2 @@
+_index._agents.tools.mcms.qzz.io. 300 IN HTTPS 1 . alpn="h2" "https://tools.mcms.qzz.io/"
+_a2a._agents.tools.mcms.qzz.io. 300 IN HTTPS 1 . alpn="h2" "https://tools.mcms.qzz.io/"

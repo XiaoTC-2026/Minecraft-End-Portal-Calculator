@@ -1,0 +1,11 @@
+{
+  "issuer": "https://tools.mcms.qzz.io/",
+  "authorization_endpoint": "https://tools.mcms.qzz.io/auth/authorize",
+  "token_endpoint": "https://tools.mcms.qzz.io/auth/token",
+  "jwks_uri": "https://tools.mcms.qzz.io/.well-known/jwks.json",
+  "response_types_supported": ["code"],
+  "subject_types_supported": ["public"],
+  "id_token_signing_alg_values_supported": ["RS256"],
+  "scopes_supported": ["openid", "profile", "email"],
+  "grant_types_supported": ["authorization_code", "refresh_token"]
+}

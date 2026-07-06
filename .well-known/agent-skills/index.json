@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agentskills.io/schemas/skill-index-v0.2.0.json",
+  "skills": [
+    {
+      "name": "site-overview",
+      "type": "text",
+      "description": "Overview of the tools.mcms.qzz.io site and available resources.",
+      "url": "https://tools.mcms.qzz.io/",
+      "sha256": ""
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "issuer": "https://tools.mcms.qzz.io/",
+  "authorization_endpoint": "https://tools.mcms.qzz.io/auth/authorize",
+  "token_endpoint": "https://tools.mcms.qzz.io/auth/token",
+  "jwks_uri": "https://tools.mcms.qzz.io/.well-known/jwks.json",
+  "grant_types_supported": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "scopes_supported": [
+    "openid",
+    "profile",
+    "email"
+  ],
+  "agent_auth": {
+    "register_uri": "https://tools.mcms.qzz.io/auth/register",
+    "supported_identity_types": [
+      "oauth2"
+    ],
+    "credential_types": [
+      "client_secret_basic"
+    ],
+    "revocation_endpoint": "https://tools.mcms.qzz.io/auth/revoke",
+    "authorization_url": "https://tools.mcms.qzz.io/auth/authorize"
+  }
+}
