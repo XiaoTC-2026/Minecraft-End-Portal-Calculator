@@ -13,6 +13,7 @@
 *{box-sizing:border-box;margin:0;padding:0;font-family:'MinecraftFont',"HarmonyOS Sans", "Noto Sans", "Helvetica Neue", "Helvetica", "Arial", "Microsoft Yahei",sans-serif;-webkit-font-smoothing: none;-moz-osx-font-smoothing: unset;text-rendering: geometricPrecision; }
 body{background:#f5f7fa;padding:20px;background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%;caret-color:#ffffff;caret-shape:block;}
 header{position: relative;min-height: 165px;max-width:850px;margin:0 auto;margin-bottom: 20px;background:#222222;box-shadow:0 2px 12px rgba(0,0,0,.08);border-style: solid; border-image-source: url('./header.png');border-image-slice: 15 15 15 15 fill;border-width: 30px 30px 30px 30px;image-rendering: pixelated;border-radius:15px;border-image-repeat:round;image-rendering: pixelated;}
+.header-icon{min-width:26px;min-height:26px;max-width:28px;max-height:28px;color:#ffffff}
 .ooops {width: 500px;height: 40px;position: absolute;bottom: -20px;right: -200px;z-index: 50;transform: rotate(-15deg);-ms-transform: rotate(-15deg);-moz-transform: rotate(-15deg);-webkit-transform: rotate(-15deg);-o-transform: rotate(-15deg);}
 .ooops .text, .ooops .shadow {font-size: 0;line-height: 40px;text-align: center;position: absolute;width: 100%;white-space: nowrap;animation: splash-bounce 0.3s infinite ease-in-out alternate;}
 .ooops .text {width: 100%;color: #ff0;z-index: 2;}
@@ -113,7 +114,7 @@ body{margin: 0;overflow-x: hidden;box-sizing: border-box; }
     
 <div id="copy-toast" class="kdcn74"><svg class="ejbc25" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span><strong>复制成功</strong></span></div>
 <header>
-    <div class="row-2"><svg xmlns="http://www.w3.org/2000/svg"  color="#ffffff" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calculator w-6 h-6" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg><h1><div class="row"><div class="h1">Minecraft</div> 末地要塞定位计算器（两点式直线法/一次函数求交点）</div></h1></div><p class="text-muted-foreground">通过两次末影之眼投掷的玩家站位和落点坐标连成的直线，来计算要塞位置。</p><p class="text-muted-GGbeng">利用末影之眼指向机制，通过两次投掷坐标，以几何算法精准计算要塞位置，助你高效探索。适合末地较大、要塞分布较稀疏的情况。需要两次投掷，且两次投掷的起点距离越远，定位结果越准确。</p>
+    <div class="row-2"><svg xmlns="http://www.w3.org/2000/svg" class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calculator w-6 h-6" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg><h1><div class="row"><div class="h1">Minecraft</div> 末地要塞定位计算器（两点式直线法/一次函数求交点）</div></h1></div><p class="text-muted-foreground">通过两次末影之眼投掷的玩家站位和落点坐标连成的直线，来计算要塞位置。</p><p class="text-muted-GGbeng">利用末影之眼指向机制，通过两次投掷坐标，以几何算法精准计算要塞位置，助你高效探索。适合末地较大、要塞分布较稀疏的情况。需要两次投掷，且两次投掷的起点距离越远，定位结果越准确。</p>
     <div id="splash-container" class="ooops">
         <div class="shadow" id="splash-shadow">加载中...</div>
         <div class="text" id="splash-text">加载中...</div>
@@ -282,7 +283,7 @@ p && p.classList.remove("show");
 }}/* 末影之眼今天心情不好，或者你的运气值需要充值了。请保持微笑，按下 F5，让“特性”再次降临，不是源代码的问题哦 */
 </script>
 <footer>
-    <div class="footer-header">此工具最后编辑于2026年7月7日 (星期二) 10:13 。</div>
+    <div class="footer-header">此工具最后编辑于2026年7月7日 (星期二) 10:25 。</div>
         <div class="footer-text-muted">本计算器如有bug请全部当做特性对待，注意：如果计算器的结果显示NaN（即Not a Number），就是你的输入的坐标过于完美导致空间量子坍缩，需要点一下重置。</div>
         <div class="footer-text-muted">本计算器仅供娱乐，使用前请务必了解相关风险，使用后请自行承担一切后果。如果你靠本计算器未找到末地要塞，那很有可能是末影之眼今天心情不好，或者你的运气值需要充值了。请保持微笑，按下 F5，让“特性”再次降临。</div>
         <div class="footer-row">
