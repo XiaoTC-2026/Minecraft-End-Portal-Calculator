@@ -1,2 +1,2 @@
 body{margin: 0;overflow-x: hidden;box-sizing: border-box; }
-.background-iframe{position: fixed;height: 3360px !important;width: 1890px !important; top:0%;border: none;z-index: -9999;left: 50%;transform: translateX(-50%) scale(1.006);will-change: transform; }
+.background-iframe{position: fixed;height: 3360px !important;width: 1890px !important; top:0%;border: none;z-index: -9999;left: 50%;transform: translateX(-50%) scale(1.012);will-change: transform; }
