@@ -1,104 +1,32 @@
 <!DOCTYPE html><html lang="zh-cn">
-<head><meta charset="UTF-8"><title>Minecraft末地要塞定位计算器 - 精准查找传送门坐标 (无需指令/两点定位法) | 歪瞳</title>
-<meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="format-detection" content="telephone=no, email=no">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-<meta name="keywords" content="歪瞳, mcms, mcms.qzz.io, tools.mcms.qzz.io, Minecraft末地要塞定位器, 末地传送门坐标计算器, 末影之眼定位工具, 要塞坐标求解器, 两点定位法计算器, 末影之眼往地下飞怎么办, 末影之眼轨迹计算, Minecraft怎么算要塞坐标, 末地要塞位置查询, 末地传送门在哪个方向, Minecraft在线计算, 网页版要塞定位器, 无需下载的mc工具, Minecraft生存模式工具, locate stronghold, Minecraft tp指令"><meta name="description" content="歪瞳开发的Minecraft末地要塞定位计算器。利用两次末影之眼投掷的坐标，通过几何算法精准计算要塞位置。无需指令，纯网页计算，安全免费。支持Java版和基岩版，助你高效探索末地。适合末地较大、要塞分布较稀疏的情况。需要两次投掷，且两次投掷的起点距离越远，定位结果越准确。"><meta name="robots" content="index, follow"><meta property="og:type" content="website"><meta property="og:title" content="歪瞳 | Minecraft末地要塞定位计算器"><meta property="og:description" content="利用几何算法精准计算Minecraft要塞坐标，无需指令，高效探索。"><meta property="og:image" content="https://zh.minecraft.wiki/images/thumb/End_Portal_%28Active%29.png/500px-End_Portal_%28Active%29.png?99291"><meta property="og:url" content="https://tools.mcms.qzz.io"><meta property="og:site_name" content="mcms.qzz.io"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="歪瞳 | Minecraft末地要塞定位计算器"><meta name="twitter:description" content="利用几何算法精准计算Minecraft要塞坐标，无需指令，高效探索。"><meta name="twitter:image" content="index.end.jcd85n.webp"><meta name="author" content="mcms.qzz.io, 2025_XiaoTangcai, XiaoTC-2026, HAHA_starSEA">
-<link rel="stylesheet" href="index.katex.506101c1.min.cbcv75.css">
-<script defer src="index.katex.87c56817.min.jcbw64.js"></script>
-<script defer src="index.auto-render.2e427455.min.cds773.js"></script>
+<head>
+<!--元数据配置 start-->
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="歪瞳, mcms, mcms.qzz.io, tools.mcms.qzz.io, Minecraft末地要塞定位器, 末地传送门坐标计算器, 末影之眼定位工具, 要塞坐标求解器, 两点定位法计算器, 末影之眼往地下飞怎么办, 末影之眼轨迹计算, Minecraft怎么算要塞坐标, 末地要塞位置查询, 末地传送门在哪个方向, Minecraft在线计算, 网页版要塞定位器, 无需下载的mc工具, Minecraft生存模式工具, locate stronghold, Minecraft tp指令">
+    <meta name="description" content="歪瞳开发的Minecraft末地要塞定位计算器。利用两次末影之眼投掷的坐标，通过几何算法精准计算要塞位置。无需指令，纯网页计算，安全免费。支持Java版和基岩版，助你高效探索末地。适合末地较大、要塞分布较稀疏的情况。需要两次投掷，且两次投掷的起点距离越远，定位结果越准确。">
+    <meta name="robots" content="index, follow"><meta property="og:type" content="website"><meta property="og:title" content="歪瞳 | Minecraft末地要塞定位计算器">
+    <meta property="og:description" content="利用几何算法精准计算Minecraft要塞坐标，无需指令，高效探索。">
+    <meta property="og:image" content="https://zh.minecraft.wiki/images/thumb/End_Portal_%28Active%29.png/500px-End_Portal_%28Active%29.png?99291">
+    <meta property="og:url" content="https://tools.mcms.qzz.io">
+    <meta property="og:site_name" content="mcms.qzz.io">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="歪瞳 | Minecraft末地要塞定位计算器">
+    <meta name="twitter:description" content="利用几何算法精准计算Minecraft要塞坐标，无需指令，高效探索。">
+    <meta name="twitter:image" content="./imgs/end.image.webp">
+    <meta name="author" content="mcms.qzz.io, 2025_XiaoTangcai, XiaoTC-2026, HAHA_starSEA">
+    <title>Minecraft末地要塞定位计算器 - 精准查找传送门坐标 (无需指令/两点定位法) | 歪瞳</title>
+<!--元数据 end-->
+<script>if(/Mobi|Android|iPhone/i.test(navigator.userAgent)){alert("检测到手机访问，本页面为电脑版布局，请在电脑浏览器中查看以获得最佳体验。");}</script>
+<link rel="stylesheet" href="./css/katex.min.css">
+<script defer src="./js/katex.min.js"></script>
+<script defer src="./js/auto-render.min.js"></script>
 <script>document.addEventListener("DOMContentLoaded", function() {renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true},{left: "$", right: "$", display: false}],ignoredTags: [],ignoredClasses: []});});</script>
-<style>
-@font-face {font-family: 'MinecraftFont';src: url('fonts/类像素字体_俐方体11号.ttf') format('truetype');font-weight: normal;font-style: normal;}
-@font-face {font-family: 'MinecraftFont-h1';src: url('fonts/B_Minecrafter.Reg(主标题).ttf') format('truetype');font-weight: normal;font-style: normal;}
-*{box-sizing:border-box;margin:0;padding:0;font-family:'MinecraftFont',"HarmonyOS Sans", "Noto Sans", "Helvetica Neue", "Helvetica", "Arial", "Microsoft Yahei",sans-serif;-webkit-font-smoothing: none;-moz-osx-font-smoothing: unset;text-rendering: geometricPrecision; }
-body{background:#f5f7fa;padding:20px;background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%;caret-color:#ffffff;caret-shape:block;}
-header{position: relative;height: 165px;max-width:850px;margin:0 auto;margin-bottom: 20px;background:#222222;box-shadow:0 2px 12px rgba(0,0,0,.08);border-style: solid; border-image-source: url('./header.png');border-image-slice: 15 15 15 15 fill;border-width: 30px 30px 30px 30px;image-rendering: pixelated;border-radius:15px;border-image-repeat:round;image-rendering: pixelated;}
-.ooops {width: 500px;height: 40px;position: absolute;bottom: -20px;right: -200px;z-index: 50;transform: rotate(-15deg);-ms-transform: rotate(-15deg);-moz-transform: rotate(-15deg);-webkit-transform: rotate(-15deg);-o-transform: rotate(-15deg);}
-.ooops .text, .ooops .shadow {font-size: 0;line-height: 40px;text-align: center;position: absolute;width: 100%;white-space: nowrap;animation: splash-bounce 0.3s infinite ease-in-out alternate;}
-.ooops .text {width: 100%;color: #ff0;z-index: 2;}
-.ooops .shadow {width: 100%;margin: 3px 0 0 4px;color: #3f3f00;z-index: 1;}
-@keyframes splash-bounce {0% { font-size: 26px; }100% { font-size: 30px; }}
-.container{max-width:850px;margin:0 auto;background:#222222;padding:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);border-style: solid; border-image-source: url('./window.webp');border-image-slice: 23 14 15 14 fill;border-width: 46px 28px 30px 28px;image-rendering: pixelated;border-radius:10px;border-image-repeat:round;image-rendering: pixelated;}
-h1{font-size:20px;font-weight:600;color:#ffffff;margin-bottom:20px;text-align:center;}
-.h1{font-size:25px;font-weight:600;color:#ffffff;text-align:center;font-family:'MinecraftFont-h1','MinecraftFont'}
-.text-muted-foreground{color:#ffffff;font-size:17px;margin-bottom:6px}
-.text-muted-GGbeng{color:#e6e6e6;font-size:13px;}
-.text-muted-647863{color:#e6e6e6;font-size:13px;margin-bottom:24px;text-align:center}
-.input-group{margin-bottom:8px;}
-.input-group label{display:block;font-size:14px;color:#ffffff;margin-bottom:6px;}
-.row{display:flex;gap:8px}
-.row-2{display:flex;gap:8px}
-.row-64738d{display:flex;}
-.number-input {flex: 1;display: flex;align-items: center;position: relative; overflow: hidden;height:2.25rem;margin: 0 5px;background-color: #5e5c60;outline: 2px #afafaf solid;}
-.number-input input {flex: 1;padding: 10px 12px;border: none;font-size: 14px;outline: none;width: calc(100% - 60px);background-color: #5e5c60;color:#fff;}
-.btn-group {display: flex;flex-direction: column;opacity: 0;transition: opacity 0.2s;width: 25px;background-color: #5e5c60;}
-.btn-up,.btn-down {padding: 0;background-color: #5e5c60;border: none;cursor: pointer;font-size: 12px;height: 20px;display: flex;align-items: center;justify-content: center;color: #d1d1d1;}
-.btn-up:hover,.btn-down:hover {color: #333;}
-.number-input:hover .btn-group {opacity: 1;}
-.btn-row{display:flex;gap:8px;margin-top:8px}
-.btn{flex: 1;display: inline-flex;align-items: center;justify-content: center;height: 2.25rem;gap: 0.5rem;white-space: nowrap;border-radius: var(0.375rem);font-size: 0.875rem;font-weight: 500;background:#0a5c36;color:#fff;font-size:16px;cursor:pointer;}
-.btn:hover{background:#0e462c}
-.btn-reset{width:72px;height:2.25rem;flex:none;background:#2b2b2b;color:#fff;display:flex;justify-content: center;align-items: center;font-size:16px;cursor:pointer}
-.btn-reset:hover{background:#1d1d1d;color:#ffffff}
-.result-card{color:#fff;max-width:850px;margin-top:20px;background-color:#222222;border-radius:12px;padding:12px;margin:0 auto;display:none;margin-top: 25px;box-shadow:0 2px 12px rgba(0,0,0,.08);border-style: solid; border-image-source: url('./window.webp');border-image-slice: 23 14 15 14 fill;border-width: 46px 28px 30px 28px;image-rendering: pixelated;border-radius:10px;border-image-repeat:round;image-rendering: pixelated;}
-.result-card h3{font-size:16px;font-weight:600;color:#dddddd;margin:0 0 20px 0;display:flex;align-items:center;gap:8px;}
-.check-icon{width:18px;height:18px;object-fit:contain;}
-.result-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;margin-bottom:20px;}
-.result-item{display:flex;flex-direction:column;gap:8px;}
-.result-item label{font-size:13px;color:#cccdcd;display:flex;align-items:center;justify-content:space-between;}
-.copy-icon{width:14px;height:14px;cursor:pointer;opacity:0.6;}
-.copy-icon:hover{opacity:1}
-.result-value{font-size:22px;background-color: #5e5c60;max-width: 276px;height: 45px;text-align:left;padding: 3.5%;font-weight:600}
-.result-value.blue{color:#165dff;}
-.result-value.green{color:#00b42a;}
-.result-value.purple{color:#ae7af7;}
-.result-value.red{color:#ff0000;}
-.result-value.yellow{color:#009689;}
-.confidence{display:flex;gap:24px;}
-.tp-row{display:flex;align-items:center;gap:8px;margin-bottom:16px;padding:10px;background-color: #5e5c60;}
-.tp-box{flex:1;font-family:monospace;font-size:14px;}
-.copy-btn{padding:4px 8px;background:#3d3d3d;color:#fff;cursor:pointer;font-size:13px;}
-.copy-btn:hover{background:#000000}
-.sr-only {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0, 0, 0, 0);white-space: nowrap;border: 0;}
-.help-container p {margin-bottom: 10px;color: #333;font-size: 14px;}
-.help-icon-wrapper {position: relative;display: inline-block;cursor: help;}
-.icon-question {color: #6b7280;transition: color 0.2s ease-in-out;width: 16px;height: 16px;vertical-align: middle;margin-left: 5px;}
-.icon-question:hover {color: #4b5563;}
-.help-bubble {position: absolute;top: -165%;left:100px;transform: translateX(-50%);background-color: rgba(0, 0, 0, 0.9);color: white;padding: 8px 12px;border-radius: 4px;font-size: 12px;line-height: 1.4;white-space: nowrap;z-index: 1000;opacity: 0;visibility: hidden;transition: opacity 0.3s ease, visibility 0.3s ease;}
-.help-bubble.show {opacity: 1;visibility: visible;}
-.help-bubble2 {position: absolute;top: -255%;left: 185px;transform: translateX(-50%);background-color: rgba(0, 0, 0, 0.9);color: white;padding: 8px 12px;border-radius: 4px;font-size: 12px;line-height: 1.4;white-space: nowrap;z-index: 1000;opacity: 0;visibility: hidden;transition: opacity 0.3s ease, visibility 0.3s ease;}
-.help-bubble2.show {opacity: 1;visibility: visible;}
-.list_block { background: #f0f0f0; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
-.list_block .list_item { margin-bottom: 8px; font-size: 15px; }
-.section_para { font-size: 16px; line-height: 1.5; color: #d7d4db; margin-bottom: 18px; text-align: justify; }
-.section_head { font-size: 20px; font-weight: bold; color:#0a5c36}
-a{color: #606770; text-decoration: none; transition: color 0.3s;}
-a:hover {color: #a81900;}
-.rur750 {margin-top: 8px;}
-.My-Name-Is-Error {display:none}
-.My-Name-Is-Error-cbdl63 {color: #ff0000;width:15px!important;;height:15px!important;;vertical-align: middle;margin-right: 5px;}
-.My-Name-Is-Error.show {display:flex;color:#ff0000;font-size:13.55px;text-align:center}
-.kdcn74 {display: flex;align-items: center;gap: 6px;padding: 12px 16px;color: #ffffff;font-size: 15px;box-shadow: 0 4px 12px rgba(0,0,0,0.15);position: fixed;top: -100px;left: 50%;transform: translateX(-50%) translateY(-100%);z-index: 9999;opacity: 0;transition: all 0.3s ease;pointer-events: none;background-color: #232324;border: 2px #313233 solid}
-.kdcn74.show{top: 20px;transform: translateX(-50%) translateY(0);opacity: 1;}
-.ejbc25 {color: #ffffff;}
-.nc7382 {width:12px;}
-.H114514 {text-align: center;}
-.text-muted-849232{color:#606770;font-size:10px;}
-.gh7389{width: 20px;height: 20px;vertical-align: middle;}
-footer {max-width:1050px;outline: 2px black solid;border-width: 4px;outline-offset: -2px;margin: 0 auto;margin-top: 30px;padding:1em;background-color: #232324;border: 2px #313233 solid;}
-.footer-link {display: inline-flex;align-items: center;gap: 6px;color: #e7e7e7;text-decoration: none;transition: color 0.2s;font-weight: 500;}
-.footer-link:hover {color: #ffffff;}
-.github-icon {width: 25px;height: 25px;vertical-align: middle;filter: grayscale(1) opacity(0.7);transition: filter 0.2s;}
-.footer-link:hover .github-icon {filter: grayscale(0) opacity(1);}
-.footer-header{font-size: 15px; font-weight: bold;color:#fff;margin-bottom: 8px;}
-.footer-text-muted{color:#fff;font-size:12px;margin-bottom:4px;}
-.footer-row{display: flex;gap: 8px;flex-direction: row;justify-content: space-between;}
-.footer-col{display: flex;flex-direction: column;justify-content: flex-end;}
-.copyright-text{color:#fff;font-size:12px;margin-bottom:4px;}
-.license-link{color:#fff;}
-.license-link:hover{color: #ffffff;text-decoration: underline;}
-.footer-qrcode{width:100px;height:100px;object-fit:contain;margin-left:10px;border-radius:5px;}
-</style>
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     
@@ -107,17 +35,18 @@ footer {max-width:1050px;outline: 2px black solid;border-width: 4px;outline-offs
 body{margin: 0;overflow-x: hidden;box-sizing: border-box; }
 .background-iframe{position: fixed;height: 3360px !important;width: 1890px !important; top:0%;border: none;z-index: -9999;left: 50%;transform: translateX(-50%) scale(1.006);will-change: transform; }
 </style>
-<iframe title="background" src="/panorama" class="background-iframe"></iframe>
+<iframe title="background" src="/panorama/" class="background-iframe"></iframe>
 <!--background iframe end-->
     
 <div id="copy-toast" class="kdcn74"><svg class="ejbc25" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span><strong>复制成功</strong></span></div>
 <header>
-    <div class="row-2"><svg xmlns="http://www.w3.org/2000/svg"  color="#ffffff" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calculator w-6 h-6" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg><h1><div class="row"><div class="h1">Minecraft</div> 末地要塞定位计算器（两点式直线法/一次函数求交点）</div></h1></div><p class="text-muted-foreground">通过两次末影之眼投掷的玩家站位和落点坐标连成的直线，来计算要塞位置。</p><p class="text-muted-GGbeng">利用末影之眼指向机制，通过两次投掷坐标，以几何算法精准计算要塞位置，助你高效探索。适合末地较大、要塞分布较稀疏的情况。需要两次投掷，且两次投掷的起点距离越远，定位结果越准确。</p>
+    <div class="row-2"><svg xmlns="http://www.w3.org/2000/svg" class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calculator w-6 h-6" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg><h1><div class="row"><div class="h1">Minecraft</div> 末地要塞定位计算器（两点式直线法/一次函数求交点）</div></h1></div><p class="text-muted-foreground">通过两次末影之眼投掷的玩家站位和落点坐标连成的直线，来计算要塞位置。</p><p class="text-muted-GGbeng">利用末影之眼指向机制，通过两次投掷坐标，以几何算法精准计算要塞位置，助你高效探索。适合末地较大、要塞分布较稀疏的情况。需要两次投掷，且两次投掷的起点距离越远，定位结果越准确。</p>
     <div id="splash-container" class="ooops">
         <div class="shadow" id="splash-shadow">加载中...</div>
         <div class="text" id="splash-text">加载中...</div>
     </div>
 </header>
+    
 <div class="container">
     <div class="input-group"><label>第一次 玩家站位 (x₁, z₁)<div class="help-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-question"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg><div class="help-bubble">这里填写你在Minecraft世界中第一次投掷末影之眼时所站的位置的X和Z坐标。</div></div></label><div class="row"><div class="number-input"><input id="x1" placeholder="x₁"><div class="btn-group"><button class="btn-up" onclick="adj('x1',1)">▲</button><button class="btn-down" onclick="adj('x1',-1)">▼</button></div></div><div class="number-input"><input id="z1" placeholder="z₁"><div class="btn-group"><button class="btn-up" onclick="adj('z1',1)">▲</button><button class="btn-down" onclick="adj('z1',-1)">▼</button></div></div></div></div>
     <div class="input-group"><label>第一次 落点 (x₂, z₂)<div class="help-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-question"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg><div class="help-bubble2">这里填写你在Minecraft投掷第一颗的末影之眼后它掉落的X和Z坐标位置,注意，末影之眼掉落时通常会偏差1-2格，<br>如果要保证精确，请填写跟着它到它飞到的位置的X和Z坐标</div></div></label><div class="row"><div class="number-input"><input id="x2" placeholder="x₂"><div class="btn-group"><button class="btn-up" onclick="adj('x2',1)">▲</button><button class="btn-down" onclick="adj('x2',-1)">▼</button></div></div><div class="number-input"><input id="z2" placeholder="z₂"><div class="btn-group"><button class="btn-up" onclick="adj('z2',1)">▲</button><button class="btn-down" onclick="adj('z2',-1)">▼</button></div></div></div></div>
@@ -128,6 +57,7 @@ body{margin: 0;overflow-x: hidden;box-sizing: border-box; }
 </div>
 <div class="result-card" id="resultCard"><h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>传送门位置结果</h3><div class="tp-row"><div class="tp-box" id="tpCmd">-</div><button class="copy-btn" onclick="copyCmd()">复制</button></div><div class="result-grid"><div class="result-item"><label>预计传送门X坐标 <svg class="copy-icon" onclick="copyCoord('outX')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></label><div class="result-value blue" id="outX">-</div></div><div class="result-item"><label>预计传送门Z坐标 <svg class="copy-icon" onclick="copyCoord('outZ')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></label><div class="result-value green" id="outZ">-</div></div><div class="result-item"><label>到传送门的距离 <svg class="copy-icon" onclick="copyCoord('distRow')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></label><div class="result-value purple" id="distRow">-</div></div></div><div class="result-grid"><div class="result-item"><label>传送门方向 <svg class="copy-icon" onclick="copyCoord('dir')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></label><div class="result-value red" id="dir">-</div></div><div class="result-item"><label>定位可信度 <svg class="copy-icon" onclick="copyCoord('conf')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></label><div class="result-value yellow" id="conf">你觉得会是啥呢？</div></div></div><strong><nodr class="row">“<div id="the-reply-from-the-developer-of-the-mcms.qzz.io-website">也许开发者忘了这个地方......</div>”</nodr></strong></div>
 </div>
+
 <br><div class="container">
 <div>
     <div class="section_head">1. 记录坐标</div><div class="section_para"><div><strong>第一次投掷：</strong>记录玩家站位坐标 $(x_1, z_1)$ 和末影珍珠落点坐标 $(x_2, z_2)$。</div><div><strong>第二次投掷：</strong>记录玩家站位坐标 $(x_3, z_3)$ 和末影珍珠落点坐标 $(x_4, z_4)$。</div></div>
@@ -136,162 +66,24 @@ body{margin: 0;overflow-x: hidden;box-sizing: border-box; }
 </div>
 <div class="text-muted-849232">由MCMod用户&nbsp;·&nbsp;<a href="https://center.mcmod.cn/522700/" target="_blank" rel="noopener">推窗子</a>&nbsp;·&nbsp;提供<a href="https://www.mcmod.cn/post/2733.html" target="_blank" rel="noopener">公式以及相关文章</a></div>
 </div>
-<script>if(/Mobi|Android|iPhone/i.test(navigator.userAgent)){alert("检测到手机访问，本页面为电脑版布局，请在电脑浏览器中查看以获得最佳体验。");}</script>
-<script>let currentVisibleBubble=null;let hideTimer=null;document.addEventListener('DOMContentLoaded',function(){const helpWrappers=document.querySelectorAll('.help-icon-wrapper');helpWrappers.forEach(wrapper=>{const bubble=wrapper.querySelector('.help-bubble, .help-bubble2');wrapper.addEventListener('click',function(e){e.stopPropagation();if(currentVisibleBubble&&currentVisibleBubble!==bubble){currentVisibleBubble.classList.remove('show')}if(hideTimer){clearTimeout(hideTimer)}if(currentVisibleBubble===bubble){bubble.classList.remove('show');currentVisibleBubble=null}else{currentVisibleBubble=bubble;bubble.classList.add('show');hideTimer=setTimeout(()=>{if(currentVisibleBubble===bubble){bubble.classList.remove('show');currentVisibleBubble=null}},5000)}})});document.addEventListener('click',function(event){if(currentVisibleBubble&&!event.target.closest('.help-icon-wrapper')){currentVisibleBubble.classList.remove('show');currentVisibleBubble=null;if(hideTimer){clearTimeout(hideTimer)}}})});</script>
-<script>async function loadSplashes() {try {const response = await fetch('splashes.txt');const text = await response.text();const splashes = text.split('\n').filter(line => line.trim() !== '');if (splashes.length > 0){const randomSplash = splashes[Math.floor(Math.random() * splashes.length)];document.getElementById('splash-text').textContent = randomSplash;document.getElementById('splash-shadow').textContent = randomSplash;document.getElementById('splash-text').style.fontSize = '26px';document.getElementById('splash-shadow').style.fontSize = '26px';}}catch (error) {console.error("读取标语失败:", error);}}loadSplashes();</script>
-<script>function showToast(){const toast=document.getElementById('copy-toast');if(!toast)return;toast.classList.remove('show');void toast.offsetWidth;toast.classList.add('show');setTimeout(()=>{toast.classList.remove('show');},5000);}async function copyCmd(){const txt=document.getElementById('tpCmd').textContent;await navigator.clipboard.writeText(txt);showToast();}async function copyCoord(id){const txt=document.getElementById(id).textContent;await navigator.clipboard.writeText(txt);showToast();}</script>
-<script>
-/* 末影之眼今天心情不好，或者你的运气值需要充值了。请保持微笑，按下 F5，让“特性”再次降临，注意，不是源代码的问题哦 */
-const developerReplies = [
-"视觉的失焦，是为了让逻辑的焦点更锐利。","算法在混乱的边缘起舞，为你锚定那唯一的交点。","表象是无序的噪点，内核是绝对的几何。","眼睛看向虚空，却为你锁定了最坚实的坐标。","以混沌为基，以逻辑为尺，丈量你与要塞的距离。",
-"在这双失焦的眼眸里，坐标是唯一的真理。","这双眼睛看不清世界，却能看清世界生成的种子。","乱中有序，歪中见准。","在随机性的迷雾中，为你点亮那盏确定性的灯。","逻辑锚定虚空。","眼斜，心不斜。","歪瞳的视线模糊了，但它的指引从未如此清晰。",
-"在这看似混乱的飞行中，蕴藏着通往要塞的秘密。","混沌显形，坐标即真理。",
-];
-function getRandomReply() {const randomIndex = Math.floor(Math.random() * developerReplies.length);return developerReplies[randomIndex];}
-function adj(id, d) {const i = document.getElementById(id);i.value = (parseFloat(i.value) || 0) + d;}
-function calc() {
-const errorContainer = document.querySelector(".My-Name-Is-Error");
-const errorTextElement = document.getElementById("My-Name-Is-Error");
-const x1 = +document.getElementById("x1").value || 0;
-const z1 = +document.getElementById("z1").value || 0;
-const x2 = +document.getElementById("x2").value || 0;
-const z2 = +document.getElementById("z2").value || 0;
-const x3 = +document.getElementById("x3").value || 0;
-const z3 = +document.getElementById("z3").value || 0;
-const x4 = +document.getElementById("x4").value || 0;
-const z4 = +document.getElementById("z4").value || 0;
-const resultCard = document.getElementById("resultCard");
-try {
-const inputs = ["x1", "z1", "x2", "z2", "x3", "z3", "x4", "z4"];
-for (let id of inputs) {
-const val = document.getElementById(id).value.trim();
-if (val !== "" && isNaN(parseFloat(val))) {
-throw new Error(`你输入的数据包含系统不认识字符：${id}`);
-}}
-const dx1 = x2 - x1;
-const dz1 = z2 - z1;
-const dx2 = x4 - x3;
-const dz2 = z4 - z3;
-const denominator = (dz1 * dx2) - (dx1 * dz2);
-if (Math.abs(denominator) < 0.00001) {
-throw new Error("只有两条直线相交才能计算！你的两条视线平行或重合，无法计算交点！");
-}
-const cross1 = (x1 * z2) - (z1 * x2);
-const cross2 = (x3 * z4) - (z3 * x4);
-const x = (cross1 * dx2 - dx1 * cross2) / denominator;
-const z = (cross1 * dz2 - dz1 * cross2) / denominator;
-const y = 36;
-const startDist = Math.hypot(x3 - x1, z3 - z1);
-let conf, confText;
-if (startDist < 100) {
-conf = "低";
-confText = "低";
-} else if (startDist < 300) {
-conf = "中";
-confText = "中";
-} else {
-conf = "高";
-confText = "高";
-}
-const toFortDist = Math.hypot(x - x4, z - z4);
-const dx = x1 - x; 
-const dz = z1 - z;
-let dir = "";
-const absDx = Math.abs(dx);
-const absDz = Math.abs(dz);
-if (Number.isNaN(dx) || Number.isNaN(dz)) {
-dir = "咱是在哪？";
-} else if (Math.abs(dx) < 0.001 && Math.abs(dz) < 0.001) {
-dir = "方向未知";
-} else {
-if (absDx < 0.001) {
-dir = dz > 0 ? "正南" : "正北";
-}
-else if (absDz < 0.001) {
-dir = dx > 0 ? "正东" : "正西";
-}
-else if (absDx > absDz) {
-if (dx > 0) {
-dir = dz > 0 ? "东南" : "东北";
-} else {
-dir = dz > 0 ? "西南" : "西北";
-}
-} else {
-if (dz > 0) {
-dir = dx > 0 ? "东南" : "西南";
-} else {
-dir = dx > 0 ? "东北" : "西北";
-}}}
-const rx = Math.round(x);
-const rz = Math.round(z);
-const cmd = `/tp @s ${Number.isNaN(rx) ? "~" : rx} ~ ${Number.isNaN(rz) ? "~" : rz}`;
-document.getElementById("tpCmd").textContent = cmd;
-document.getElementById("outX").textContent = rx;
-document.getElementById("outZ").textContent = rz;
-document.getElementById("distRow").textContent = `${Math.round(toFortDist)} blocks`;
-document.getElementById("dir").textContent = dir;
-document.getElementById("conf").textContent = confText;
-document.getElementById("the-reply-from-the-developer-of-the-mcms.qzz.io-website").textContent = getRandomReply();
-if (errorTextElement) {
-errorTextElement.innerHTML = "<strong>无错误</strong>";
-}
-if (errorContainer) {
-errorContainer.classList.remove("show");
-}
-if (resultCard) {
-resultCard.style.display = "block";
-}
-} catch (error) {
-if (errorTextElement) {
-const safeMsg = error.message
-.replace(/&/g, "&amp;")
-.replace(/</g, "&lt;")
-.replace(/>/g, "&gt;");
-errorTextElement.innerHTML = `报错：${safeMsg}`;
-}
-if (errorContainer) {
-errorContainer.classList.add("show");
-}
-document.getElementById("tpCmd").textContent = "/tp @s ~ ~ ~";
-document.getElementById("outX").textContent = "NaN";
-document.getElementById("outZ").textContent = "NaN";
-document.getElementById("distRow").textContent = "NaN blocks";
-document.getElementById("dir").textContent = "未知";
-document.getElementById("conf").textContent = "无";
-document.getElementById("the-reply-from-the-developer-of-the-mcms.qzz.io-website").textContent = "计算崩溃，但界面必须活着。";
-if (resultCard) {
-resultCard.style.display = "block";
-}}
-const weirdImages = ["imgs/(1).webp","imgs/(2).webp","imgs/(3).webp","imgs/(4).webp","imgs/(5).webp","imgs/(6).webp","imgs/(7).webp","imgs/(8).webp","imgs/(9).webp","imgs/(10).webp","imgs/(11).webp","imgs/(12).webp","imgs/(13).webp","imgs/(14).webp","imgs/(15).webp","imgs/(16).webp","imgs/(17).webp","imgs/(18).webp","imgs/(19).webp","imgs/(20).webp","imgs/(21).webp","imgs/(22).webp","imgs/(23).webp","imgs/(24).webp","imgs/(25).webp","imgs/(26).webp","imgs/(27).webp","imgs/(28).webp","imgs/(29).webp","imgs/(30).webp","imgs/(31).webp","imgs/(32).webp","imgs/(33).webp","imgs/(34).webp","imgs/(35).webp","imgs/(36).webp","imgs/(37).webp","imgs/(38).webp","imgs/(39).webp","imgs/(40).webp","imgs/(41).webp","imgs/(42).webp","imgs/(43).webp","imgs/(44).webp","imgs/(45).webp","imgs/(46).webp","imgs/(47).webp","imgs/(48).webp","imgs/(49).webp","imgs/(50).webp","imgs/(51).webp","imgs/(52).webp","imgs/(53).webp","imgs/(54).webp","imgs/(55).webp","imgs/(56).webp","imgs/(57).webp","imgs/(58).webp","imgs/(59).png","imgs/(60).png"];
-const randomImg = weirdImages[Math.floor(Math.random() * weirdImages.length)];
-document.getElementById("114514").style.display = "block";
-const imgBox = document.getElementById("114514");
-if (imgBox) {
-imgBox.innerHTML = `<img src="${randomImg}" style="height:100px; border-radius:10px;">`;
-}}
-function resetAll() {
-document.querySelectorAll("input").forEach((e) => (e.value = ""));
-document.getElementById("resultCard").style.display = "none";
-document.getElementById("114514").style.display = "none";
-const e = document.getElementById("My-Name-Is-Error");
-if (e) {
-e.innerHTML = "<strong>无错误</strong>";
-const p = e.parentNode;
-p && p.classList.remove("show");
-}}/* 末影之眼今天心情不好，或者你的运气值需要充值了。请保持微笑，按下 F5，让“特性”再次降临，不是源代码的问题哦 */
-</script>
+
+<script src="./js/scripts.js"></script>
+
 <footer>
-    <div class="footer-header">此工具最后编辑于2026年7月6日 (星期一) 22:43 。</div>
+    <div class="footer-header">此工具最后编辑于2026年7月7日 (星期二) 10:25 。</div>
         <div class="footer-text-muted">本计算器如有bug请全部当做特性对待，注意：如果计算器的结果显示NaN（即Not a Number），就是你的输入的坐标过于完美导致空间量子坍缩，需要点一下重置。</div>
         <div class="footer-text-muted">本计算器仅供娱乐，使用前请务必了解相关风险，使用后请自行承担一切后果。如果你靠本计算器未找到末地要塞，那很有可能是末影之眼今天心情不好，或者你的运气值需要充值了。请保持微笑，按下 F5，让“特性”再次降临。</div>
         <div class="footer-row">
             <div class="footer-col">
-                <a href="https://github.com/XiaoTC-2026/tools.mcms.qzz.io/" target="_blank" class="footer-link" rel="noopener"><img src="github.svg" width="16" class="github-icon" alt="GitHub">Code Open Source</a>
+                <a href="https://github.com/XiaoTC-2026/tools.mcms.qzz.io/" target="_blank" class="footer-link" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="github-icon" enable-background="new 0 0 5000 5000" version="1.1" viewBox="0 0 5e3 5e3"> <style type="text/css">.st0{fill:#1B1F23;} .st1{fill:#FFFFFF;}</style>  <circle class="st0" cx="2500" cy="2495.9" r="1675.1"/> <path class="st1" d="m2500 789c-943.8 0-1708.2 764.4-1708.2 1708.2 0 755.9 489 1394.3 1168 1620.7 85.4 14.9 117.4-36.3 117.4-81.1 0-40.6-2.1-175.1-2.1-318.2-429.2 79-540.2-104.6-574.4-200.7-19.2-49.1-102.5-200.7-175.1-241.3-59.8-32-145.2-111-2.1-113.2 134.5-2.1 230.6 123.8 262.6 175.1 153.7 258.4 399.3 185.8 497.5 140.9 14.9-111 59.8-185.8 108.9-228.5-380.1-42.7-777.2-190-777.2-843.4 0-185.8 66.2-339.5 175.1-459.1-17.1-42.7-76.9-217.8 17.1-452.7 0 0 143.1-44.8 469.8 175.1 136.7-38.4 281.9-57.7 427.1-57.7s290.4 19.2 427.1 57.7c326.7-222.1 469.8-175.1 469.8-175.1 94 234.9 34.2 410 17.1 452.7 108.9 119.6 175.1 271.2 175.1 459.1 0 655.5-399.3 800.7-779.4 843.4 61.9 53.4 115.3 155.9 115.3 316 0 228.5-2.1 412.1-2.1 469.8 0 44.8 32 98.2 117.4 81.1 674.7-226.3 1163.7-866.9 1163.7-1620.7-0.2-943.7-764.6-1708.1-1708.4-1708.1z"/> </svg>
+                    Code Open Source
+                </a>
                 <p class="copyright-text">© 2026 mcms.qzz.io · <a href="LICENSE.txt" target="_blank" class="license-link" rel="noopener">MIT License</a><span class="risk-text"> · Use At Your Own Risk <br><a href="https://www.himcbbs.com/resources/125/"  target="_blank" class="license-link">字体来源www.himcbbs.com</a></span></p>
             </div>
-        <div class="row-64738d">
+        <div class="footer-row">
             <div id="114514" class="H114514"><!-- 看谁呢？！--></div>
-            <img class="footer-qrcode" src="index.qrcode.png" title="此页面二维码" width="100px"  alt="https://tools.mcms.qzz.io/et" class="footer-qrcode">
+            <img class="footer-qrcode" src="./imgs/index.qrcode.png" title="此页面二维码" width="100px"  alt="https://tools.mcms.qzz.io/et" class="footer-qrcode">
         </div>
         </div>
     </footer>
