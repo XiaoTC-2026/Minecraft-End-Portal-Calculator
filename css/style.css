@@ -2,7 +2,6 @@
 @font-face {font-family: 'MinecraftFont-h1';src: url('fonts/B_Minecrafter.Reg(主标题).ttf') format('truetype');font-weight: normal;font-style: normal;}
 *{box-sizing:border-box;margin:0;padding:0;font-family:'MinecraftFont',"HarmonyOS Sans", "Noto Sans", "Helvetica Neue", "Helvetica", "Arial", "Microsoft Yahei",sans-serif;-webkit-font-smoothing: none;-moz-osx-font-smoothing: unset;text-rendering: geometricPrecision; }
 body{background:#f5f7fa;padding:20px;background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%;caret-color:#ffffff;caret-shape:block;}
-header{position: relative;min-height: 165px;max-width:850px;margin:0 auto;margin-bottom: 20px;background:#222222;box-shadow:0 2px 12px rgba(0,0,0,.08);border-style: solid; border-image-source: url('./header.png');border-image-slice: 15 15 15 15 fill;border-width: 30px 30px 30px 30px;image-rendering: pixelated;border-radius:15px;border-image-repeat:round;image-rendering: pixelated;}
 .row{display:flex;gap:8px}
 @media (max-width: 550px) {.row{display:block;}}
 .header-icon{min-width:26px;min-height:26px;max-width:28px;max-height:28px;color:#ffffff}
@@ -11,7 +10,6 @@ header{position: relative;min-height: 165px;max-width:850px;margin:0 auto;margin
 .ooops .text {width: 100%;color: #ff0;z-index: 2;}
 .ooops .shadow {width: 100%;margin: 3px 0 0 4px;color: #3f3f00;z-index: 1;}
 @keyframes splash-bounce {0% { font-size: 26px; }100% { font-size: 30px; }}
-.container{max-width:850px;margin:0 auto;background:#222222;padding:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);border-style: solid; border-image-source: url('./window.webp');border-image-slice: 23 14 15 14 fill;border-width: 46px 28px 30px 28px;image-rendering: pixelated;border-radius:10px;border-image-repeat:round;image-rendering: pixelated;}
 h1{font-size:20px;font-weight:600;color:#ffffff;margin-bottom:20px;text-align:center;}
 .h1{font-size:25px;font-weight:600;color:#ffffff;text-align:center;font-family:'MinecraftFont-h1','MinecraftFont'}
 footer {max-width:1050px;outline: 2px black solid;border-width: 4px;outline-offset: -2px;margin: 0 auto;margin-top: 30px;padding:1em;background-color: #232324;border: 2px #313233 solid;}
