@@ -5,7 +5,7 @@ body{background:#f5f7fa;padding:20px;background-size:cover;background-position:c
 .row{display:flex;gap:8px}
 @media (max-width: 550px) {.row{display:block;}}
 .header-icon{min-width:26px;min-height:26px;max-width:28px;max-height:28px;color:#ffffff}
-.ooops {width: 500px;height: 40px;position: absolute;bottom: -20px;right: -200px;z-index: 50;transform: rotate(-15deg);-ms-transform: rotate(-15deg);-moz-transform: rotate(-15deg);-webkit-transform: rotate(-15deg);-o-transform: rotate(-15deg);}
+.ooops {width: 500px;height: 40px;position: absolute;bottom: -20px;right: -200px;z-index:9999;transform: rotate(-15deg);-ms-transform: rotate(-15deg);-moz-transform: rotate(-15deg);-webkit-transform: rotate(-15deg);-o-transform: rotate(-15deg);}
 .ooops .text, .ooops .shadow {font-size: 0;line-height: 40px;text-align: center;position: absolute;width: 100%;white-space: nowrap;animation: splash-bounce 0.3s infinite ease-in-out alternate;}
 .ooops .text {width: 100%;color: #ff0;z-index: 2;}
 .ooops .shadow {width: 100%;margin: 3px 0 0 4px;color: #3f3f00;z-index: 1;}
