@@ -32,7 +32,7 @@ const dx2 = x4 - x3;
 const dz2 = z4 - z3;
 const denominator = (dz1 * dx2) - (dx1 * dz2);
 if (Math.abs(denominator) < 0.00001) {
-throw new Error("只有两条直线相交才能计算！你的两条视线平行或重合，无法计算交点！");
+throw new Error("只有两条直线相交才能计算！你的两条直线平行或重合，无法计算交点！");
 }
 const cross1 = (x1 * z2) - (z1 * x2);
 const cross2 = (x3 * z4) - (z3 * x4);
