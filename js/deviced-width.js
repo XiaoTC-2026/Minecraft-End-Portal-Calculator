@@ -1,1 +1,0 @@
-if(/Mobi|Android|iPhone/i.test(navigator.userAgent)){alert("检测到手机访问，本页面为电脑版布局，请在电脑浏览器中查看以获得最佳体验。");}

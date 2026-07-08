@@ -1,4 +1,8 @@
-//calc.main.js
+// copy-toast.js
+function showToast(){const toast=document.getElementById('copy-toast');if(!toast)return;toast.classList.remove('show');void toast.offsetWidth;toast.classList.add('show');setTimeout(()=>{toast.classList.remove('show');},5000);}async function copyCmd(){const txt=document.getElementById('tpCmd').textContent;await navigator.clipboard.writeText(txt);showToast();}async function copyCoord(id){const txt=document.getElementById(id).textContent;await navigator.clipboard.writeText(txt);showToast();}
+// deviced-width.js
+if(/Mobi|Android|iPhone/i.test(navigator.userAgent)){alert("检测到手机访问，本页面为电脑版布局，请在电脑浏览器中查看以获得最佳体验。");}
+// calc.main.js
 /* 末影之眼今天心情不好，或者你的运气值需要充值了。请保持微笑，按下 F5，让“特性”再次降临，注意，不是源代码的问题哦 */
 const developerReplies = [
 "视觉的失焦，是为了让逻辑的焦点更锐利。","算法在混乱的边缘起舞，为你锚定那唯一的交点。","表象是无序的噪点，内核是绝对的几何。","眼睛看向虚空，却为你锁定了最坚实的坐标。","以混沌为基，以逻辑为尺，丈量你与要塞的距离。",
@@ -137,3 +141,5 @@ e.innerHTML = "<strong>无错误</strong>";
 const p = e.parentNode;
 p && p.classList.remove("show");
 }}/* 末影之眼今天心情不好，或者你的运气值需要充值了。请保持微笑，按下 F5，让“特性”再次降临，不是源代码的问题哦 */
+// help.js
+let currentVisibleBubble=null;let hideTimer=null;document.addEventListener('DOMContentLoaded',function(){const helpWrappers=document.querySelectorAll('.help-icon-wrapper');helpWrappers.forEach(wrapper=>{const bubble=wrapper.querySelector('.help-bubble, .help-bubble2');wrapper.addEventListener('click',function(e){e.stopPropagation();if(currentVisibleBubble&&currentVisibleBubble!==bubble){currentVisibleBubble.classList.remove('show')}if(hideTimer){clearTimeout(hideTimer)}if(currentVisibleBubble===bubble){bubble.classList.remove('show');currentVisibleBubble=null}else{currentVisibleBubble=bubble;bubble.classList.add('show');hideTimer=setTimeout(()=>{if(currentVisibleBubble===bubble){bubble.classList.remove('show');currentVisibleBubble=null}},5000)}})});document.addEventListener('click',function(event){if(currentVisibleBubble&&!event.target.closest('.help-icon-wrapper')){currentVisibleBubble.classList.remove('show');currentVisibleBubble=null;if(hideTimer){clearTimeout(hideTimer)}}})});
