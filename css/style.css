@@ -1,5 +1,5 @@
-@font-face {font-family: 'MinecraftFont';src: url('fonts/类像素字体_俐方体11号.ttf') format('truetype');font-weight: normal;font-style: normal;}
-@font-face {font-family: 'MinecraftFont-h1';src: url('fonts/B_Minecrafter.Reg(主标题).ttf') format('truetype');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'MinecraftFont';src: url('/fonts/类像素字体_俐方体11号.ttf') format('truetype');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'MinecraftFont-h1';src: url('/fonts/B_Minecrafter.Reg(主标题).ttf') format('truetype');font-weight: normal;font-style: normal;}
 *{box-sizing:border-box;margin:0;padding:0;font-family:'MinecraftFont',"HarmonyOS Sans", "Noto Sans", "Helvetica Neue", "Helvetica", "Arial", "Microsoft Yahei",sans-serif;-webkit-font-smoothing: none;-moz-osx-font-smoothing: unset;text-rendering: geometricPrecision; }
 body{background:#f5f7fa;padding:20px;background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%;caret-color:#ffffff;caret-shape:block;}
 .row{display:flex;gap:8px}
