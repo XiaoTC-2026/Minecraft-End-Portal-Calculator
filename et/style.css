@@ -1,7 +1,7 @@
 @font-face {font-family: 'MinecraftFont';src: url('/fonts/类像素字体_俐方体11号.ttf') format('truetype');font-weight: normal;font-style: normal;}
 @font-face {font-family: 'MinecraftFont-h1';src: url('/fonts/B_Minecrafter.Reg(主标题).ttf') format('truetype');font-weight: normal;font-style: normal;}
 *{box-sizing:border-box;margin:0;padding:0;font-family:'MinecraftFont',"HarmonyOS Sans", "Noto Sans", "Helvetica Neue", "Helvetica", "Arial", "Microsoft Yahei",sans-serif;-webkit-font-smoothing: none;-moz-osx-font-smoothing: unset;text-rendering: geometricPrecision; }
-body{background:#f5f7fa;padding:20px;background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%;caret-color:#ffffff;caret-shape:block;}
+body{background:#f5f7fa;padding:20px;background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%;caret-color:#ffffff;caret-shape:block;-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;text-rendering: optimizeLegibility;}
 header{position: relative;min-height: 165px;max-width:850px;margin:0 auto;margin-bottom: 60px;background:#222222;box-shadow:0 2px 12px rgba(0,0,0,.08);border-style: solid; border-image-source: url('/css/header.png');border-image-slice: 15 15 15 15 fill;border-width: 30px 30px 30px 30px;image-rendering: pixelated;border-radius:15px;border-image-repeat:round;image-rendering: pixelated;}
 .header-row{display:flex;gap:8px}
 @media (max-width: 840px) {.header-row{display:block;}}
@@ -48,11 +48,11 @@ a:hover {color: #a81900;}
 .check-icon{width:18px;height:18px;object-fit:contain;}
 .result-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;margin-bottom:20px;}
 .result-item{display:flex;flex-direction:column;gap:8px;}
-.result-item label{font-size:13px;color:#cccdcd;display:flex;align-items:center;justify-content:space-between;}
+.result-item label{font-size:0.77rem;;color:#cccdcd;display:flex;align-items:center;justify-content:space-between;}
 .copy-icon{width:14px;height:14px;cursor:pointer;opacity:0.6;}
 .copy-icon:hover{opacity:1}
 .result-value{font-size:22px;background-color: #5e5c60;max-width: 276px;height: 45px;text-align:left;padding: 3.5%;font-weight:600}
-.result-value.blue{color:#165dff;}
+.result-value.blue{color:#ff8400;}
 .result-value.green{color:#00b42a;}
 .result-value.purple{color:#ae7af7;}
 .result-value.red{color:#ff0000;}
@@ -65,7 +65,7 @@ a:hover {color: #a81900;}
 .section_head { font-size: 20px; font-weight: bold; color:#0a5c36}
 .rur750 {margin-top: 8px;overflow-x: auto;max-width:100%;overflow-y: hidden;padding: 10px;}
 .My-Name-Is-Error {display:none}
-.My-Name-Is-Error-cbdl63 {color: #ff0000;width:13px!important;height:13px!important;;vertical-align: middle;margin-right: 5px;}
+.My-Name-Is-Error-icon {color: #ff0000;width:13.5px!important;height:13.5px!important;;vertical-align: middle;margin-right: 5px;}
 .My-Name-Is-Error.show {display:flex;color:#ff0000;font-size:12px;text-align:center}
 .kdcn74 {display: flex;align-items: center;gap: 6px;padding: 12px 16px;color: #ffffff;font-size: 15px;box-shadow: 0 4px 12px rgba(0,0,0,0.15);position: fixed;top: -100px;left: 50%;transform: translateX(-50%) translateY(-100%);z-index: 9999;opacity: 0;transition: all 0.3s ease;pointer-events: none;background-color: #232324;border: 2px #313233 solid}
 .kdcn74.show{top: 20px;transform: translateX(-50%) translateY(0);opacity: 1;}
