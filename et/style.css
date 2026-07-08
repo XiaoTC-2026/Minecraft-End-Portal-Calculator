@@ -65,8 +65,8 @@ a:hover {color: #a81900;}
 .section_head { font-size: 20px; font-weight: bold; color:#0a5c36}
 .rur750 {margin-top: 8px;overflow-x: auto;max-width:100%;overflow-y: hidden;padding: 10px;}
 .My-Name-Is-Error {display:none}
-.My-Name-Is-Error-cbdl63 {color: #ff0000;width:15px!important;;height:15px!important;;vertical-align: middle;margin-right: 5px;}
-.My-Name-Is-Error.show {display:flex;color:#ff0000;font-size:13.55px;text-align:center}
+.My-Name-Is-Error-cbdl63 {color: #ff0000;width:13px!important;height:13px!important;;vertical-align: middle;margin-right: 5px;}
+.My-Name-Is-Error.show {display:flex;color:#ff0000;font-size:12px;text-align:center}
 .kdcn74 {display: flex;align-items: center;gap: 6px;padding: 12px 16px;color: #ffffff;font-size: 15px;box-shadow: 0 4px 12px rgba(0,0,0,0.15);position: fixed;top: -100px;left: 50%;transform: translateX(-50%) translateY(-100%);z-index: 9999;opacity: 0;transition: all 0.3s ease;pointer-events: none;background-color: #232324;border: 2px #313233 solid}
 .kdcn74.show{top: 20px;transform: translateX(-50%) translateY(0);opacity: 1;}
 .ejbc25 {color: #ffffff;}
