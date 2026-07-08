@@ -1,4 +1,2 @@
 name = "mctools"
-main = "src/index.js" 
 compatibility_date = "2026-07-07"
-assets = { directory = "./" } 
