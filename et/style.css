@@ -43,7 +43,7 @@ a:hover {color: #a81900;}
 .btn:hover{background:#0e462c}
 .btn-reset{width:72px;height:2.25rem;flex:none;background:#2b2b2b;color:#fff;display:flex;justify-content: center;align-items: center;font-size:16px;cursor:pointer}
 .btn-reset:hover{background:#1d1d1d;color:#ffffff}
-.result-card{color:#fff;max-width:850px;margin-top:20px;background-color:#222222;border-radius:12px;padding:12px;margin:0 auto;display:none;margin-top: 25px;box-shadow:0 2px 12px rgba(0,0,0,.08);border-style: solid; border-image-source: url('./window.webp');border-image-slice: 23 14 15 14 fill;border-width: 46px 28px 30px 28px;image-rendering: pixelated;border-radius:10px;border-image-repeat:round;image-rendering: pixelated;}
+.result-card{color:#fff;max-width:850px;margin-top:20px;background-color:#222222;border-radius:12px;padding:12px;margin:0 auto;display:none;margin-top: 25px;box-shadow:0 2px 12px rgba(0,0,0,.08);border-style: solid; border-image-source: url('/css/window.webp');border-image-slice: 23 14 15 14 fill;border-width: 46px 28px 30px 28px;image-rendering: pixelated;border-radius:10px;border-image-repeat:round;image-rendering: pixelated;}
 .result-card h3{font-size:16px;font-weight:600;color:#dddddd;margin:0 0 20px 0;display:flex;align-items:center;gap:8px;}
 .check-icon{width:18px;height:18px;object-fit:contain;}
 .result-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;margin-bottom:20px;}
