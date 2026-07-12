@@ -51,13 +51,13 @@ a:hover {color: #a81900;}
 .result-item label{font-size:0.77rem;;color:#cccdcd;display:flex;align-items:center;justify-content:space-between;}
 .copy-icon{width:14px;height:14px;cursor:pointer;opacity:0.6;}
 .copy-icon:hover{opacity:1}
-.result-value{font-size:22px;background-color: #5e5c60;max-width: 276px;height: 45px;text-align:left;padding: 3.5%;font-weight:600}
+.result-value{font-size:22px;background-color: #5e5c60;max-width: 276px;height: 45px;text-align:left;padding: 3.5%;font-weight:600;outline: 2px #afafaf solid;}
 .result-value.blue{color:#ff8400;}
 .result-value.green{color:#00b42a;}
 .result-value.purple{color:#ae7af7;}
 .result-value.red{color:#ff0000;}
 .result-value.yellow{color:#009689;}
-.tp-row{display:flex;align-items:center;gap:8px;margin-bottom:16px;padding:10px;background-color: #5e5c60;}
+.tp-row{display:flex;align-items:center;gap:8px;margin-bottom:16px;padding:10px;background-color: #5e5c60;outline: 2px #afafaf solid;}
 .tp-box{flex:1;font-family:monospace;font-size:14px;}
 .copy-btn{padding:4px 8px;background:#3d3d3d;color:#fff;cursor:pointer;font-size:13px;}
 .copy-btn:hover{background:#000000}
