@@ -24,7 +24,7 @@
 <!--元数据 end-->
 <!--判断是否为“远古”浏览器 start-->
 <!--[if IE]>
-<script>location.replace("./ie-fallback.html")</script>
+<script>location.replace("./ie-fallback")</script>
 <![endif]-->
     <script>
     try {
@@ -33,7 +33,7 @@
         const isIosEdge = /iPhone|iPad|iPod/.test(ua) && /EdgiOS/.test(ua);
         if(isIosEdge) throw new Error("ios edge crash risk");
     } catch {
-        location.replace("./ie-fallback.html");
+        location.replace("./ie-fallback");
     }
     // 远古浏览器内核制造厂商，能不能更新下产品？
     // 移动端特殊套皮浏览器，渲染机制实在一言难尽
@@ -41,7 +41,7 @@
     <noscript>
     <style>body{background:#fff3cd;text-align:center;padding:2rem;font-size:18px;}</style>
     <div>
-    检测到JavaScript已禁用，计算器无法运行，<a href="./ie-fallback.html">点击此处进入兼容备用页面</a>
+    检测到JavaScript已禁用，计算器无法运行，<a href="./ie-fallback">点击此处进入兼容备用页面</a>
     </div>
     </noscript>
 <!--判断是否为“远古”浏览器 end-->
@@ -82,8 +82,7 @@
 <div>
     <div class="section_head">1. 记录坐标</div><div class="section_para"><div><strong>第一次投掷：</strong>记录玩家站位坐标 $(x_1, z_1)$ 和末影珍珠落点坐标 $(x_2, z_2)$。</div><div><strong>第二次投掷：</strong>记录玩家站位坐标 $(x_3, z_3)$ 和末影珍珠落点坐标 $(x_4, z_4)$。</div></div>
     <div class="section_head">2. 核心公式（两点式）</div><div class="section_para"><div>直接利用坐标差值构建方程，无需计算斜率，简单粗暴。</div><div class="rur750"><strong>直线 1：</strong><p>$$ \frac{x - x_1}{x_2 - x_1} = \frac{z - z_1}{z_2 - z_1} $$</p></div><div class="rur750"><strong>直线 2：</strong><p>$$ \frac{x - x_3}{x_4 - x_3} = \frac{z - z_3}{z_4 - z_3} $$</p></div></div>
-    <div class="section_head">3. 联立求解</div><div class="section_para"><div>将上述两个方程联立，求解 $x$ 和 $z$。如果分母为 0（垂直线），代码会自动处理为“特性”模式。</div><div class="rur750"><strong>最终解算逻辑：</strong><p>$$ (z_2 - z_1)(x - x_1) = (x_2 - x_1)(z - z_1) $$</p><br><p>$$ (z_4 - z_3)(x - x_3) = (x_4 - x_3)(z - z_3) $$</p></div></div>
-    <div class="section_head">4. 参考演算过程</div><div class="section_para"><p>直接把采集坐标代入页面两条原式，联立求解，步骤极简：</p ><p>原始公式：<br>① $(z_2 - z_1)(x - x_1) = (x_2 - x_1)(z - z_1)$<br>② $(z_4 - z_3)(x - x_3) = (x_4 - x_3)(z - z_3)$</p ><p>示例坐标：<br>第一次：$x_1=100,z_1=64，x_2=160,z_2=120$<br>第二次：$x_3=200,z_3=96，x_4=140,z_4=160$</p ><h4>步骤1：全部数值直接代入两条原式</h4><p>代入公式①：$(120-64)(x-100)=(160-100)(z-64)$<br>化简差值得到方程1：$56(x-100)=60(z-64)$</p ><p>代入公式②：$(160-96)(x-200)=(140-200)(z-96)$<br>化简差值得到方程2：$64(x-200)=-60(z-96)$</p ><h4>步骤2：展开两条代入后的等式</h4><p>方程1展开：$56x - 5600 = 60z - 3840$ → $56x - 60z = 1760$</p ><p>方程2展开：$64x - 12800 = -60z + 5760$ → $64x + 60z = 18560$</p ><h4>步骤3：两式相加消去z，直接算出x</h4><p>$56x+64x = 1760+18560$<br>$120x = 20320$<br>$x≈169.33$</p><h4>步骤4：把x随便代入任意一条代入后的原式，算出z</h4><p>将 $x≈169.33$ 代入 $56(x-100)=60(z-64)$：<br>$56×69.33=60(z-64)$<br>$3882.48=60z-3840$<br>$60z=7722.48$<br>$z≈128.71$</p ><br><p>简易提示：算出小数四舍五入取整数即为要塞坐标；两式相加无x项代表两次投掷方向一致，需重新采集坐标。</p ></div>
+    <div class="section_head">3. 联立求解</div><div class="section_para"><div>将上述两个方程看作一个方程组，并将其中 $(x_1, z_1)$ ， $(x_2, z_2)$ ， $(x_3, z_3)$ ， $(x_4, z_4)$ 替换为你获取到的数据，再求解 $x$ 和 $z$。如果分母为 0（垂直线），代码会自动处理为“特性”模式。</div><div class="rur750"><strong>最终解算逻辑：</strong><p>$$ (z_2 - z_1)(x - x_1) = (x_2 - x_1)(z - z_1) $$</p><br><p>$$ (z_4 - z_3)(x - x_3) = (x_4 - x_3)(z - z_3) $$</p></div></div>
 </div>
 <div class="text-muted-849232">由MCMod用户&nbsp;·&nbsp;<a href="https://center.mcmod.cn/522700/" target="_blank" rel="noopener">推窗子</a>&nbsp;·&nbsp;提供<a href="https://www.mcmod.cn/post/2733.html" target="_blank" rel="noopener">公式以及相关文章</a></div>
 </div>
