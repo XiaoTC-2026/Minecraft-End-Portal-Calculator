@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="zh-cn">
+<!DOCTYPE html>
+<html lang="zh-cn">
 <head>
 <!--元数据配置 start-->
     <meta charset="UTF-8">
@@ -21,7 +22,29 @@
     <meta name="author" content="mcms.qzz.io, 2025_XiaoTangcai, XiaoTC-2026, HAHA_starSEA">
     <title>Minecraft末地要塞定位计算器 - 精准查找传送门坐标 (无需指令/两点定位法) | 歪瞳</title>
 <!--元数据 end-->
-<script src="/js/deviced-width.js"></script>
+<!--判断是否为“远古”浏览器 start-->
+<!--[if IE]>
+<script>location.replace("./ie-fallback.html")</script>
+<![endif]-->
+    <script>
+    try {
+        new Function("()=>{}");
+        const ua = navigator.userAgent;
+        const isIosEdge = /iPhone|iPad|iPod/.test(ua) && /EdgiOS/.test(ua);
+        if(isIosEdge) throw new Error("ios edge crash risk");
+    } catch {
+        location.replace("./ie-fallback.html");
+    }
+    // 远古浏览器内核制造厂商，能不能更新下产品？
+    // 移动端特殊套皮浏览器，渲染机制实在一言难尽
+    </script>
+    <noscript>
+    <style>body{background:#fff3cd;text-align:center;padding:2rem;font-size:18px;}</style>
+    <div>
+    检测到JavaScript已禁用，计算器无法运行，<a href="./ie-fallback.html">点击此处进入兼容备用页面</a>
+    </div>
+    </noscript>
+<!--判断是否为“远古”浏览器 end-->
 <link rel="stylesheet" href="/css/katex.min.css">
 <script defer src="/js/katex.min.js"></script>
 <script defer src="/js/auto-render.min.js"></script>
@@ -60,6 +83,8 @@
     <div class="section_head">1. 记录坐标</div><div class="section_para"><div><strong>第一次投掷：</strong>记录玩家站位坐标 $(x_1, z_1)$ 和末影珍珠落点坐标 $(x_2, z_2)$。</div><div><strong>第二次投掷：</strong>记录玩家站位坐标 $(x_3, z_3)$ 和末影珍珠落点坐标 $(x_4, z_4)$。</div></div>
     <div class="section_head">2. 核心公式（两点式）</div><div class="section_para"><div>直接利用坐标差值构建方程，无需计算斜率，简单粗暴。</div><div class="rur750"><strong>直线 1：</strong><p>$$ \frac{x - x_1}{x_2 - x_1} = \frac{z - z_1}{z_2 - z_1} $$</p></div><div class="rur750"><strong>直线 2：</strong><p>$$ \frac{x - x_3}{x_4 - x_3} = \frac{z - z_3}{z_4 - z_3} $$</p></div></div>
     <div class="section_head">3. 联立求解</div><div class="section_para"><div>将上述两个方程联立，消元求解 $x$ 和 $z$。如果分母为 0（垂直线），代码会自动处理为“特性”模式。</div><div class="rur750"><strong>最终解算逻辑：</strong><p>$$ (z_2 - z_1)(x - x_1) = (x_2 - x_1)(z - z_1) $$</p><br><p>$$ (z_4 - z_3)(x - x_3) = (x_4 - x_3)(z - z_3) $$</p></div></div>
+<div class="section_head">4. 参考演算过程（手动分步计算示例）</div>
+<div class="section_para"><p>下面用一组虚拟坐标完整走一遍计算流程，方便不熟悉代数的玩家对照手算：</p ><p>示例采集坐标：<br>第一次站位 $(x_1=100,z_1=64)$，末影眼落点 $(x_2=160,z_2=120)$<br>第二次站位 $(x_3=200,z_3=96)$，末影眼落点 $(x_4=140,z_4=160)$</p ><h4>步骤1：计算两组坐标差值</h4><p>$dx_1 = x_2 - x_1 = 160 - 100 = 60$<br>$dz_1 = z_2 - z_1 = 120 - 64 = 56$<br>$dx_2 = x_4 - x_3 = 140 - 200 = -60$<br>$dz_2 = z_4 - z_3 = 160 - 96 = 64$</p ><h4>步骤2：算出二元一次方程系数 A、B、C</h4><p>第一条直线系数：<br>$A_1 = dz_1 = 56$<br>$B_1 = -dx_1 = -60$<br>$C_1 = A_1 \cdot x_1 + B_1 \cdot z_1 = 56 \times 100 + (-60) \times 64 = 1760$</p ><p>第二条直线系数：<br>$A_2 = dz_2 = 64$<br>$B_2 = -dx_2 = 60$<br>$C_2 = A_2 \cdot x_3 + B_2 \cdot z_3 = 64 \times 200 + 60 \times 96 = 18240$</p ><h4>步骤3：计算分母判别式 D</h4><p>$D = A_1 \times B_2 - A_2 \times B_1 = 56 \times 60 - 64 \times (-60) = 7200$<br>$D \neq 0$，代表两条直线存在唯一交点，可以正常算出要塞坐标；若 $D=0$，代表两次投掷视线平行，无法定位。</p ><h4>步骤4：代入公式算出末地要塞坐标 $(x,z)$</h4><p>要塞X坐标：$x=\frac{C_1 B_2 - C_2 B_1}{D} = \frac{1760 \times 60 - 18240 \times (-60)}{7200} = 166.67$<br>要塞Z坐标：$z=\frac{A_1 C_2 - A_2 C_1}{D} = \frac{56 \times 18240 - 64 \times 1760}{7200} \approx 144.53$</p ><div class="section_warn"><p>💡 实操小提示：MC地图坐标取整数即可，算出小数四舍五入；若计算时出现极大/极小数值，说明坐标采集时投掷角度过小，建议重新抛末影之眼采集数据。</p ></div></div>
 </div>
 <div class="text-muted-849232">由MCMod用户&nbsp;·&nbsp;<a href="https://center.mcmod.cn/522700/" target="_blank" rel="noopener">推窗子</a>&nbsp;·&nbsp;提供<a href="https://www.mcmod.cn/post/2733.html" target="_blank" rel="noopener">公式以及相关文章</a></div>
 </div>
@@ -85,4 +110,6 @@
         </div>
     </div>
 </footer>
-</body></html><!--由mcms.qzz.io提供-->
+</body>
+</html>
+<!--由mcms.qzz.io提供-->

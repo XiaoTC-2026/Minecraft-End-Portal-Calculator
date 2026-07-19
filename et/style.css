@@ -63,6 +63,7 @@ a:hover {color: #a81900;}
 .copy-btn:hover{background:#000000}
 .section_para { font-size: 16px; line-height: 1.5; color: #d7d4db; margin-bottom: 18px; text-align: justify; }
 .section_head { font-size: 20px; font-weight: bold; color:#0a5c36}
+.section_warn {background: #fff2cc;padding: 15px;border: 1px solid #ffcc66;}
 .rur750 {margin-top: 8px;overflow-x: auto;max-width:100%;overflow-y: hidden;padding: 10px;}
 .My-Name-Is-Error {display:none}
 .My-Name-Is-Error-icon {color: #ff0000;width:13.5px!important;height:13.5px!important;;vertical-align: middle;margin-right: 5px;}
